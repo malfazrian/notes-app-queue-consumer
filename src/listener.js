@@ -13,7 +13,7 @@ class Listener {
       const notes = await this._notesService.getNotes(userId);
       const result = await this._mailSender.sendEmail(
         targetEmail,
-        JSON.stringify(notes)
+        JSON.stringify(notes),
       );
       console.log(result);
     } catch (error) {
